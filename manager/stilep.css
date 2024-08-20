@@ -1,0 +1,142 @@
+body {
+	font: normal .8em/1.5em Arial, Helvetica, sans-serif;
+	background: #ebebeb;
+	width: 1000px;
+	margin: 30px auto;
+	color: #666;
+	}
+a 	{ color: #333;}
+td {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	color: #006;
+}
+h1	{
+	margin: 0;
+	padding: 50px;
+	font-weight: 800;
+	color: #CCCCCC;
+	text-align: center;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: #000099;
+	}
+h2	{
+	margin: 0;
+	padding: 10px;
+	font-weight: 400;
+	color: #ffffff;
+	background:#000000;
+	text-align:center;
+	}
+#nav{
+	padding: 7px 6px 0;
+	line-height: 100%;
+	width:100%;
+	border-radius: 2em;
+	background: #8b8b8b; 
+	border: solid 1px #6d6d6d;
+	}
+#nav li 
+	{
+	margin: 0 5px;
+	padding: 0 0 8px;
+	float: left;
+	position: relative;
+	list-style: none;
+	}
+/* main level link */
+#nav a 
+	{
+	font-weight: bold;
+	color: #e7e5e5;
+	text-decoration: none;
+	display: block;
+	padding:  8px 20px;
+	margin: 0;
+	border-radius: 1.6em;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	}
+/* menu principale link hover */
+#nav li:hover > a 
+	{
+	background: #d1d1d1; /* for non-css3 browsers */
+	color: #444;
+	border-top: solid 1px #f8f8f8;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+	}
+/* sottomenu link hover */
+#nav ul li:hover a, #nav li:hover li a 
+	{
+	background: none;
+	border: none;
+	color: #666;
+	
+	}
+#nav ul a:hover 
+	{
+	background: #0399d4 !important; /* for non-css3 browsers */
+	color: #fff !important;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+	}
+/* elementi menu */
+#nav ul 
+	{
+	background: #ddd; /* for non-css3 browsers */
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#cfcfcf)); /* for webkit browsers */
+	display: none;
+	margin: 0;
+	padding: 0;
+	width: 185px;
+	position: absolute;
+	top: 35px;
+	left: 0;
+	border: solid 1px #b4b4b4;
+	border-radius: 10px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+	}
+/* menu dropdown */
+#nav li:hover > ul 
+	{
+	display: block;
+	}
+#nav ul li 
+	{
+	float: none;
+	margin: 0;
+	padding: 0;
+	}
+#nav ul a 
+	{
+	font-weight: normal;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, .9);
+	}
+/* sottomenu */
+#nav ul ul 
+	{
+	left: 181px;
+	top: -3px;
+	}
+
+/* clearfix */
+#nav:after 
+	{
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+	}
+#nav {display: inline-block;}
+
+.pulsante{
+	background-color: #000099;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 26px;
+	color: #FFFF00;
+	text-align: center;
+	text-transform: capitalize;
+	width: 200px;
+	height: 50px;
+}

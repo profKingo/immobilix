@@ -1,0 +1,58 @@
+<script type="text/javascript">
+function apripag() {
+	if (!confirm("Il salvataggio sovrascriverà la vecchia ricerca. Continui?")) {
+		window.location="#";
+      	return false;
+    }
+	else
+	{
+		window.location="http://www.astegiudiziarie.it";
+		document.getElementById("testo").innerHTML="Esegui applicazione";
+	}
+}
+function esegui() {
+	window.location="esegui.php";
+	document.getElementById("testo").innerHTML="Vedi Lista immobili caricati";
+}
+function lista() {
+	window.location="lista.php";
+	document.getElementById("testo").innerHTML="Apri il sito";
+}
+</script>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Pannello Amministrazione</title>
+<link href="stilep.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<h1>GESTIONE IMMOBILI ASTE - PANNELLO DI GESTIONE</h1>
+<br>
+<ul id="nav">
+	<li><a href="#">Gestione Immobili</a>
+	<ul>
+        <li><p onClick="apripag()">Apri pagina ricerca</p></li>
+        <li><p onClick="esegui()">Esegui calcolo</p></li>
+        <li><p onClick="lista()">Apri lista riservata</p></li>
+	</ul>
+	</li>
+</ul>
+<br>
+	<table width="70%" border="0" align="center" cellpadding="2" cellspacing="2">
+	  <tr>
+	    <td style="text-align: center"><p onClick="apripag()"><input name="apri" type="submit" class="pulsante" id="apri" value="Apri sito "></p></td>
+      </tr>
+	  <tr>
+	    <td style="text-align: center"><p onClick="esegui()"><input name="esegui" type="submit" class="pulsante" id="esegui" value="Esegui app"></p></td>
+      </tr>
+	  <tr>
+	    <td style="text-align: center"><p onClick="lista()"><input name="lista" type="submit" class="pulsante" id="lista" value="Vedi lista"></p></td>
+      </tr>
+	  <tr>
+	    <td height="67" style="background-color: #CCC; color: #009; font-size: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; text-align: center"><h3 id="testo">Apri il sito </h3></td>
+      </tr>
+  </table>
+
+
+</body>
+</html>
