@@ -3,17 +3,17 @@ def cerca(file_in):
     f=open(file_in,"r",encoding="UTF-8")
     frase=f.read().lower()
                                                             ### VECCHIO SISTEMA    nd-mediaobject__content in")
-    ind=frase.find("searchLayoutList__5CPEE")
+    ind=frase.find("nd-list__item styles_in-searchlayoutlistitem__y8aer")
     vistamappa=0
     if ind<=0:
-        ind=frase.find("listingCardTitle")                  ### in-realestateresults__item\" id")
+        ind=frase.find("searchlayoutlistitem__y8aer")                  ### in-realestateresults__item\" id")
         frase=frase[ind:]
-        lista_parole=frase.split("listingCardTitle")        ### in-realestateresults__item\" id")
+        lista_parole=frase.split("searchlayoutlistitem__y8aer")        ### in-realestateresults__item\" id")
         vistamappa=1
     else:
         frase=frase[ind:]
         #print(frase)
-        lista_parole=frase.split("searchLayoutList__5CPEE") ### nd-mediaobject__content in")
+        lista_parole=frase.split("nd-list__item styles_in-searchlayoutlistitem__y8aer") ### nd-mediaobject__content in")
     conta=0
     maxc=0
     res=[]
@@ -42,10 +42,11 @@ def cerca(file_in):
                 stato=parola[:parola.find("recent")]
                 ######################################################'''
 
-                if parola.find("relistcardformattedprice__text")>0:
-                    prezzo=parola[parola.find("</span"):parola.find("</div")]
+                if parola.find("listingcardprice__earbq")>0:    ### relistcardformattedprice__text
+                    parola=parola[parola.find("listingcardprice__earbq"):]
+                    prezzo=parola[parola.find("<span"):parola.find("</span")]
                     #'-relistcardprice is-small"><span><span class="in-relistcardformattedprice__text">da </span>
-                    prezzo=prezzo.replace("</span>","")
+                    prezzo=prezzo.replace("<span>","")
                 else:
                     prezzo=parola[parola.find("<span"):parola.find("</span")]
                     prezzo=prezzo.replace("<span>","")
@@ -77,6 +78,8 @@ def cerca(file_in):
                     piano=piano.replace("\"","")
                     piano=piano.replace("<span>","")
                     piano=piano.replace("</span>","")
+                    piano=piano.replace("piano ","")
+                    
                     if piano=="t":
                         pianodesc="terra"
                     elif piano=="r":
