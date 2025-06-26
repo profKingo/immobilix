@@ -2,17 +2,18 @@ def cerca(file_in):
     tabfinale=[]
     f=open(file_in,"r",encoding="UTF-8")
     frase=f.read().lower()
-    ind=frase.find("nd-mediaobject__content in")
+                                                            ### VECCHIO SISTEMA    nd-mediaobject__content in")
+    ind=frase.find("searchLayoutList__5CPEE")
     vistamappa=0
     if ind<=0:
-        ind=frase.find("in-realestateresults__item\" id")
+        ind=frase.find("listingCardTitle")                  ### in-realestateresults__item\" id")
         frase=frase[ind:]
-        lista_parole=frase.split("in-realestateresults__item\" id")
+        lista_parole=frase.split("listingCardTitle")        ### in-realestateresults__item\" id")
         vistamappa=1
     else:
         frase=frase[ind:]
         #print(frase)
-        lista_parole=frase.split("nd-mediaobject__content in")
+        lista_parole=frase.split("searchLayoutList__5CPEE") ### nd-mediaobject__content in")
     conta=0
     maxc=0
     res=[]

@@ -1,0 +1,12 @@
+<svg id="mainSvg" onload ="init()" xmlns="http://www.w3.org/2000/svg" version="1.1"  viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" style="width:100%; height:100%; position:absolute; top:0; left:0;">
+	<script type="text/ecmascript"> <![CDATA[
+	    function init(){parent.geopoi.subscribe(window,window.document);}
+	]]></script>
+	<title>GEOPOI</title>
+	<defs>
+		<style type="text/css"><![CDATA[
+			.geopoi-svg-tooltiptxt{font-size:11px;opacity:1;font-weight:bold;fill:#0070a3;stroke:none}
+			.geopoi-svg-tooltiprect{fill:#f2f5f7;stroke:none;stroke-width:0.5px;opacity:1;}
+		]]></style>
+	</defs>
+</svg>

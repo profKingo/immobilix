@@ -1,0 +1,72 @@
+#testata_menu {
+    position: absolute;
+	top:51px;
+    width: 100%;
+} 
+#login {
+	top:-28px;
+}
+
+#canali_twit_yout {
+    margin-top: 0px;
+} 
+#logo {
+    position: relative;
+	z-index: 5000;
+} 
+#testata {
+    /*margin-top: 100px;*/
+}	
+#barra {
+	  position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    text-align:left;
+    min-height: 100px;
+    background-color: #303030;
+    height: auto;
+    min-height: 50px;
+    padding: 2px 0;
+/*
+    background-image: url("../img/testata/sfondo_testata.jpg");
+    background-position: left top;
+    background-repeat: repeat;
+    border: 0 solid red;
+    height: auto;
+    margin: 0;
+    min-height: 100px;
+    padding: 0;
+    width: 100%;
+*/	
+}
+#barra p a, #barra p a:visited {
+    color: #fff;
+    
+    font-weight: 600;
+	text-decoration: none;
+    /*padding-left: 10px;
+	*/
+    margin-left: 10px;
+}
+#barra  a:hover {
+	text-decoration: underline;
+}
+
+#barra .lingue {
+    float: right;
+    text-align: right;
+    width: 20%;
+    margin-right: 10px;
+}
+#barra .lingue span {
+    text-align:right;
+    background-color: #303030;
+	padding: 10px;
+}
+
+#barra .lingue span.current {
+    color: #fff;
+    background-color: #eb641f;
+    font-weight: 600;
+}
