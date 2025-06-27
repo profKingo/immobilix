@@ -44,12 +44,16 @@ def cerca(file_in):
 
                 if parola.find("listingcardprice__earbq")>0:    ### relistcardformattedprice__text
                     parola=parola[parola.find("listingcardprice__earbq"):]
+                    if parola.find("da </span><span>")>0:
+                        parola=parola[parola.find("da </span>")+10:]
                     prezzo=parola[parola.find("<span"):parola.find("</span")]
                     #'-relistcardprice is-small"><span><span class="in-relistcardformattedprice__text">da </span>
                     prezzo=prezzo.replace("<span>","")
                 else:
                     prezzo=parola[parola.find("<span"):parola.find("</span")]
                     prezzo=prezzo.replace("<span>","")
+                if prezzo.find("richiesta")>0:
+                    prezzo="prezzo su richiesta"
                 prezzo=prezzo.removeprefix("€ ")
                 prezzo=prezzo.replace(".","")
                 prezzo=prezzo.replace(",00","")
@@ -71,6 +75,8 @@ def cerca(file_in):
                 r=mq.find(" m")
                 if r>0:
                     mq=mq[0:r]
+                mq=mq.replace(".","")
+                mq=mq.replace("da ","")
                 ival=parola.find("stairs\">")
                 if ival>0:
                     parola=parola[ival:]
